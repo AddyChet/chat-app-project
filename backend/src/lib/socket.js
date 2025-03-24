@@ -11,7 +11,7 @@ const server = http.createServer(app);
 //the cors here simple means allow cross origin resource sharing b/w websockets
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173", "https://your-deployed-frontend.com"],
+    origin: ["http://localhost:5173", "https://chat-app-project-bpq1.onrender.com"],
     methods: ["GET", "POST"],
     credentials: true,
   }
