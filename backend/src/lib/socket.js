@@ -11,8 +11,10 @@ const server = http.createServer(app);
 //the cors here simple means allow cross origin resource sharing b/w websockets
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173"],
-  },
+    origin: ["http://localhost:5173", "https://your-deployed-frontend.com"],
+    methods: ["GET", "POST"],
+    credentials: true,
+  }
 });
 
 export function getReceiverSocketID (userId) {
